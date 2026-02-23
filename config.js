@@ -1,21 +1,42 @@
 module.exports = {
-  AUTO_VIEW_STATUS: 'true',          // status dekhne ka auto
-  AUTO_LIKE_STATUS: 'true',          // status like karne ka auto
-  AUTO_RECORDING: 'true',            // typing/recording dikhaane ka
-  AUTO_LIKE_EMOJI: ['🌸', '🪴', '💫', '🍂', '🌟'],  // sirf kuch emoji rakhe, baaki hata diye
-  PREFIX: '!',                       // ab ! se command chalega (change kar sakta hai)
-  MAX_RETRIES: 3,                    // retry limit same
-  GROUP_INVITE_LINK: '',             // agar nahi chahiye to empty rakh
-  ADMIN_LIST_PATH: './admin.json',   // same
-  IMAGE_PATH: '',                    // agar image nahi chahiye to empty
-  NEWSLETTER_JID: '',                // newsletter band kar diya
-  NEWSLETTER_MESSAGE_ID: '',         // yeh bhi empty
-  OTP_EXPIRY: 300000,                // same
-  NEWS_JSON_URL: '',                 // empty
-  BOT_NAME: 'Mini_Killer',         // tera naya naam daal
-  OWNER_NAME: 'killer king',               // tera naam
-  OWNER_NUMBER: '923483763349',      // apna number daal (country code ke saath)
-  BOT_VERSION: '1.0',                // simple version
-  BOT_FOOTER: '> Private Bot',       // koi credit nahi
-  CHANNEL_LINK: '', https://whatsapp.com/channel/0029Vb7fOTnEAKWNxV9ccr3v                 // channel link hata diya
+    // Bot کی بنیادی معلومات
+    BOT_NAME: "killer_mini-bot",              // اپنا بوٹ کا نام ڈالو
+    BOT_VERSION: "1.0.0",
+    BOT_FOOTER: "> Powered by killer king",     // فوٹر ٹیکسٹ
+
+    // Owner اور پرائیویسی
+    OWNER_NUMBER: "923483763349",          // اپنا نمبر ڈالو (بغیر + یا @s.whatsapp.net کے، صرف 91xxxxxxxxxx)
+    OWNER_NAME: "killer king",               // اپنا نام
+
+    // کمانڈ کا پریفکس
+    PREFIX: ".",                           // تبدیل کر سکتے ہو جیسے ! یا #
+
+    // پرائیویسی کنٹرول (پرائیویٹ بنانے کے لیے)
+    PRIVATE_MODE: true,                    // true = صرف اوونر اور اپرووڈ لوگوں کو جواب دے گا
+    APPROVED_NUMBERS: [                    // اضافی اپرووڈ نمبرز (صرف نمبر، جیسے "919999999999")
+        "923483763349",
+        // اور شامل کر سکتے ہو
+    ],
+    APPROVED_GROUPS: [],                   // اپرووڈ گروپس کے JID (جیسے "120363xxxxxx@g.us")
+
+    // آٹو فیچرز (اصل سے رکھے، لیکن تبدیل کرنے کے قابل)
+    AUTO_VIEW_STATUS: 'true',
+    AUTO_LIKE_STATUS: 'true',
+    AUTO_RECORDING: 'false',               // اگر چاہو تو false کر دو
+    AUTO_LIKE_EMOJI: ['🌸', '🪴', '💫', '🍂', '🌟', '🫀', '👀', '🤖', '🚩', '🥰', '🗿', '💜', '💙', '🌝', '🖤', '💚'],
+
+    // لنکس (اپنے تبدیل کر لو)
+    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/YOUR_GROUP_LINK',
+    CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vb7fOTnEAKWNxV9ccr3v',
+    IMAGE_PATH: 'https://files.catbox.moe/tmv25c.jpg',  // بوٹ کی تصویر کا لنک
+
+    // دیگر سیٹنگز (اگر ضرورت نہ ہو تو کمنٹ آؤٹ کر سکتے ہو)
+    MAX_RETRIES: 3,
+    OTP_EXPIRY: 300000,
+    NEWSLETTER_JID: '',                    // اگر نیوز لیٹر نہیں چاہیے تو خالی چھوڑ دو
+    NEWSLETTER_MESSAGE_ID: '',
+    ADMIN_LIST_PATH: './admin.json',       // اگر ایڈمن لسٹ استعمال کر رہے ہو
+
+    // MongoDB یا دیگر (اگر استعمال ہو رہا ہو تو .env سے لے لو)
+    // MONGO_URI: process.env.MONGO_URI || '',
 };
